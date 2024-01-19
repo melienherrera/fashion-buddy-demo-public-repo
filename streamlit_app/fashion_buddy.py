@@ -9,8 +9,11 @@ from dotenv import find_dotenv, load_dotenv
 dotenv_path = find_dotenv()
 load_dotenv(dotenv_path)
 
-# Load Google Service Account
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = st.secrets["google"]['GOOGLE_APPLICATION_CREDENTIALS']
+# Retrieve the JSON key file path from Streamlit Secrets
+key_path = st.secrets["google_key_path"]
+
+# Set the environment variable to point to the key file
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = key_path
 
 # Use Gemini Pro Vision as our LLM + Embedding Model
 vertexai.init(project=os.getenv("GCP_PROJECT_ID"))
