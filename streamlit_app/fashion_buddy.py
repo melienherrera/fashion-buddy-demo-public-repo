@@ -10,7 +10,7 @@ dotenv_path = find_dotenv()
 load_dotenv(dotenv_path)
 
 # Load Google Service Account
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.getenv("GOOGLE_APPLICATION_CREDENTIALS_PATH")
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = st.secrets["google"]['GOOGLE_APPLICATION_CREDENTIALS']
 
 # Use Gemini Pro Vision as our LLM + Embedding Model
 vertexai.init(project=os.getenv("GCP_PROJECT_ID"))
