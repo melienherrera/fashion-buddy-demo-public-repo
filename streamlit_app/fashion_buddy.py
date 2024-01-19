@@ -11,10 +11,10 @@ dotenv_path = find_dotenv()
 load_dotenv(dotenv_path)
 
 # Retrieve the JSON key file path from Streamlit Secrets
-key_path = st.secrets['google_key_path']
-
+# key_path = st.secrets['google_key_path']
+print(st.secrets['google_key_path'])
 # Set the environment variable to point to the key file
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = key_path
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = st.secrets['google_key_path']
 
 # credentials, project_id = google.auth.default()
 
