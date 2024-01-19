@@ -12,11 +12,11 @@ load_dotenv(dotenv_path)
 
 # Retrieve the JSON key file path from Streamlit Secrets
 # key_path = st.secrets['google_key_path']
-print(st.secrets['google_key_path'])
+print("BANGTAN TEST" , st.secrets['google_key_path'])
 # Set the environment variable to point to the key file
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = st.secrets['google_key_path']
 
-# credentials, project_id = google.auth.default()
+credentials, project_id = google.auth.default()
 
 # Use Gemini Pro Vision as our LLM + Embedding Model
 vertexai.init(project=os.getenv("GCP_PROJECT_ID"))
