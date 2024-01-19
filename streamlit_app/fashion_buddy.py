@@ -4,16 +4,19 @@ import io, os, vertexai
 from vertexai.preview.vision_models import MultiModalEmbeddingModel, Image
 from astrapy.db import AstraDB, AstraDBCollection
 from dotenv import find_dotenv, load_dotenv
+import google.auth
 
 # Get environment variables
 dotenv_path = find_dotenv()
 load_dotenv(dotenv_path)
 
 # Retrieve the JSON key file path from Streamlit Secrets
-key_path = st.secrets["google_key_path"]
+key_path = st.secrets['google_key_path']
 
 # Set the environment variable to point to the key file
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = key_path
+
+credentials, project_id = google.auth.default()
 
 # Use Gemini Pro Vision as our LLM + Embedding Model
 vertexai.init(project=os.getenv("GCP_PROJECT_ID"))
