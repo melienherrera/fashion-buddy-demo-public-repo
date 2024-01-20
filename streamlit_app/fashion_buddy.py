@@ -160,7 +160,7 @@ def main():
         st.write("⬇️ Download an example image:⬇️")
         st.download_button(
             label='Download Image',
-            data=open('./Assets/example-outfit.jpeg', 'rb').read(),
+            data=open('streamlit_app/Assets/example-outfit.jpeg', 'rb').read(),
             file_name='example-outfit.jpeg',
             mime='image/jpeg'
         )
