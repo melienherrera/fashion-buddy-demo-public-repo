@@ -20,13 +20,13 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = ".streamlit/secrets.json"
 
 
 # Use Gemini Pro Vision as our LLM + Embedding Model
-vertexai.init(project=os.getenv("GCP_PROJECT_ID"))
+vertexai.init(project=st.secrets["GCP_PROJECT_ID"])
 model = MultiModalEmbeddingModel.from_pretrained("multimodalembedding@001")
 
 # Connect to AstraDB    
 astra_db = AstraDB(
-    token = os.getenv("ASTRA_DB_TOKEN"),
-    api_endpoint = os.getenv("ASTRA_API_ENDPOINT"))
+    token = st.secrets["ASTRA_DB_TOKEN"],
+    api_endpoint = st.secrets["ASTRA_API_ENDPOINT"]
 
 # Connect to Collection
 collection = AstraDBCollection(
