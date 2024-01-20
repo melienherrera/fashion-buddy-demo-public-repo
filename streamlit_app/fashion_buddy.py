@@ -26,7 +26,7 @@ model = MultiModalEmbeddingModel.from_pretrained("multimodalembedding@001")
 # Connect to AstraDB    
 astra_db = AstraDB(
     token = st.secrets["ASTRA_DB_TOKEN"],
-    api_endpoint = st.secrets["ASTRA_API_ENDPOINT"]
+    api_endpoint = st.secrets["ASTRA_API_ENDPOINT"])
 
 # Connect to Collection
 collection = AstraDBCollection(
