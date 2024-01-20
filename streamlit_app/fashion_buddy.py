@@ -139,7 +139,7 @@ def main():
 
     # Add DataStax Logo:
     with st.sidebar:
-         st.image('./Assets/datastax-logo.svg')
+         st.image('streamlit_app/Assets/datastax-logo.svg')
          st.text('')
 
     # Add Clothing Filters header
