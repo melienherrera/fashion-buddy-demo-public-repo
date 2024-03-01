@@ -5,7 +5,7 @@ Have you ever scrolled through photo sharing websites such as Instagram or Pinte
 
 ### Overview
 This repo contains a Streamlit app which uses Vertex AI, Gemini, RAG, and Astra DB to perform vector similarity search and multi-modal Retrieval Augmented Generation (RAG). The same code is available in a Colab here: [Link to Colab](https://colab.research.google.com/drive/1XQm_gBCZ-xRcUj4oaxcgNDqQtZLg2NpD#scrollTo=A2hnFk7YlWAN)
-Try out Fashion Buddy [here!](https://fashion-buddy-demo-public-repo-maekeyzpa4xfmjheeqf5h5.streamlit.app/)
+Try out Fashion Buddy [here!](https://fashion-buddy-demo.streamlit.app/)
 
 ### Before you get started
 Make sure you have the following:
