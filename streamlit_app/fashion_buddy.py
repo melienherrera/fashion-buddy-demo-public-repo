@@ -133,9 +133,9 @@ def find_similar_products(uploaded_image_url, gender, clothing_types):
 
 def main():
     # Display the Title + Description
-    st.title("Fashion Buddy🎄🤖")
+    st.title("Fashion Buddy 🛍️")
     st.write("*Fashion Buddy is where Vector Search 🤝 Fashion.*") 
-    st.write("With the holiday season coming up, say goodbye to wardrobe dilemmas and hello to effortless style. It's designed to help YOU find the best outfits and clothing items! All you need to do is upload any outfit or piece of clothing, and we'll find outfits that are similar. Give it a try!")
+    st.write("Say goodbye to wardrobe dilemmas and hello to effortless style. It's designed to help YOU find the best outfits and clothing items! All you need to do is upload any outfit or piece of clothing, and we'll find outfits that are similar. Give it a try!")
 
     # Add DataStax Logo:
     with st.sidebar:
